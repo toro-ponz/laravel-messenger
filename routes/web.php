@@ -13,3 +13,8 @@
 
 Route::get('/', IndexController::class)->name('index');
 
+Route::group(['namespace' => 'Contact', 'prefix' => 'contact', 'as' => 'contact.'], function () {
+    Route::get('/', 'ContactsController@index')->name('index');
+    Route::post('/', 'ContactsController@send')->name('send');
+    Route::get('/complate', 'ContactsController@complate')->name('complate');
+});
