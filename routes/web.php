@@ -11,9 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    $now = \Carbon\Carbon::now();
-    
-    return view('welcome')
-        ->with('now', $now);
-});
+Route::get('/', A\IndexController::class);
