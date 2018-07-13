@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/', A\IndexController::class);
+Route::get('/', IndexController::class);
