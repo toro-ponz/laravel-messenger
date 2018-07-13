@@ -2,20 +2,8 @@
 
 @section('title', 'Laravel')
 
-@section('style')
-  <style>
-    .title {
-      font-size: 84px;
-    }
-
-    .m-b-md {
-      margin-bottom: 30px;
-    }
-  </style>
-@endsection
-
 @section('content')
-  <div>
+  <div class="v-welcome">
     <div class="title m-b-md">
       Laravel
     </div>
