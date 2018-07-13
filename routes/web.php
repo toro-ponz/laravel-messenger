@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $now = \Carbon\Carbon::now();
+    
+    return view('welcome')
+        ->with('now', $now);
 });
