@@ -81,7 +81,7 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
+                <p>{{ \Carbon\Carbon::now()->format('Y年m月d日 H時i分s秒') }}</p>
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
