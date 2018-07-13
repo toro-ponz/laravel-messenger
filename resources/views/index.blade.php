@@ -3,7 +3,7 @@
 @section('title', 'Laravel')
 
 @section('content')
-  <div class="v-welcome">
+  <div class="v-index">
     <div class="title m-b-md">
       Laravel
     </div>
