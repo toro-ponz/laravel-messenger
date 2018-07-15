@@ -8,13 +8,13 @@
     <div class="form-box">
       {!! Form::open(['url' => route('contact.send'), 'method' => 'post']) !!}
         <h2>名前</h2>
-        {!! Form::text('name', null, ['class' => 'form-text', 'required' => 'required', 'placeholder' => '山田 太郎']) !!}
+        {!! Form::text('name', null, ['required' => 'required', 'placeholder' => '山田 太郎']) !!}
         <h2>メールアドレス</h2>
-        {!! Form::email('email', null, ['class' => 'form-email', 'required' => 'required', 'placeholder' => 'example@hoge.jp']) !!}
+        {!! Form::email('email', null, ['required' => 'required', 'placeholder' => 'example@hoge.jp']) !!}
         <h2>お問い合わせ内容</h2>
-        {!! Form::textarea('content', null, ['class' => 'form-textarea', 'required' => 'required', 'placeholder' => 'お問い合わせ内容']) !!}
+        {!! Form::textarea('content', null, ['required' => 'required', 'placeholder' => 'お問い合わせ内容']) !!}
         <div class="submit-button-box">
-          {!! Form::submit('送信する', ['class' => 'form-submit']) !!}
+          {!! Form::submit('送信する') !!}
         </div>
       {!! Form::close() !!}
     </div>
