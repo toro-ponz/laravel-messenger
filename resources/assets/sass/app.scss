@@ -7,6 +7,10 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+// components
+@import "components/checkbox";
+@import "components/radio";
+
 // views
 @import "views/layouts/frame";
 @import "views/welcome";
