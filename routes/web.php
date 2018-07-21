@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    $now = \Carbon\Carbon::now();
-    
-    return view('welcome')
-        ->with('now', $now);
+Route::get('/', IndexController::class)->name('index');
+
+// お問い合わせ
+Route::group(['prefix' => 'contact', 'as' => 'contact.'], function () {
+    Route::get('/', 'ContactsController@index')->name('index');
+    Route::post('/', 'ContactsController@send')->name('send');
+    Route::get('/complate', 'ContactsController@complate')->name('complate');
 });
