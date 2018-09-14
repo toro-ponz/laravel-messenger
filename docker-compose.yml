@@ -3,7 +3,7 @@ version: '3'
 services:
   app:
     build: ./docker/php
-    container_name: messanger-app
+    container_name: messenger-app
     volumes:
       - ./:/var/www/html
     environment:
@@ -11,7 +11,7 @@ services:
 
   web:
     build: ./docker/nginx
-    container_name: messanger-web
+    container_name: messenger-web
     ports:
       - 80:80
     volumes:
@@ -24,9 +24,9 @@ services:
 
   db:
     build: ./docker/mysql
-    container_name: messanger-db
+    container_name: messenger-db
     environment:
-      MYSQL_DATABASE: root
+      MYSQL_DATABASE: messenger
       MYSQL_ROOT_PASSWORD: root
       TZ: Asia/Tokyo
     ports:
