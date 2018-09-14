@@ -1,6 +1,16 @@
 version: '3'
 
 services:
+  db:
+    build: ./docker/mysql
+    container_name: messenger-db
+    environment:
+      MYSQL_DATABASE: messenger
+      MYSQL_ROOT_PASSWORD: root
+      TZ: Asia/Tokyo
+    ports:
+      - 3306:3306
+
   app:
     build: ./docker/php
     container_name: messenger-app
@@ -21,13 +31,3 @@ services:
       TZ: Asia/Tokyo
     links:
       - app
-
-  db:
-    build: ./docker/mysql
-    container_name: messenger-db
-    environment:
-      MYSQL_DATABASE: messenger
-      MYSQL_ROOT_PASSWORD: root
-      TZ: Asia/Tokyo
-    ports:
-      - 3306:3306
