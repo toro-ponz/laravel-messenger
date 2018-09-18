@@ -10,6 +10,8 @@ services:
       TZ: Asia/Tokyo
     ports:
       - 3306:3306
+    volumes:
+      - ./docker/mysql/lib:/var/lib/mysql
 
   app:
     build: ./docker/php
